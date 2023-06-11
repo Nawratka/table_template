@@ -5,15 +5,103 @@
 }
 
 body {
-    background-color: #fff;
-    color: #000;
-    font-family: sans-serif;
+	/* according to documentation margin in mm && width like A4 */
+	width: 210mm;
+	margin: 20mm;
+	background-color: #fff;
+	color: #000;
+	font-family: 'Trebuchet MS', sans-serif;
 }
 
-table, td, tr, th {
-    border: 1px solid black;
+main {
+    display: flex;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 table {
     width: 100%;
+}
+
+table,
+td,
+tr,
+th {
+    border-collapse: separate;
+    border-spacing: 0 3px;
+}
+
+td,
+tr,
+th {
+	padding: 3px;
+    text-align: right;
+}
+
+td {
+    font-size: 13px;
+}
+
+tr > td:nth-child(2) {
+    width: 50%;
+    text-align: left;
+}
+
+tr > td:nth-child(6),
+tr > td:nth-child(8) {
+    width: 17%;
+}
+
+.first-col {
+	width: 5%;
+	background-color: #2f6518;
+}
+
+.adress {
+	height: 70px;
+	font-size: 30px;
+	font-weight: lighter;
+	text-align: left;
+	color: #2f6518;
+}
+
+.title {
+	text-align: left;
+	border-top: 2px solid #696868;
+	border-bottom: 2px solid #696868;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+.project-caption {
+	background-color: #2f6518;
+	color: #fff;
+    text-transform: uppercase;
+}
+
+.project-caption th {
+	font-size: 19px;
+	font-weight: lighter;
+    text-align: right;
+}
+
+.project-caption th:nth-child(2) {
+    text-align: left;
+}
+
+.sub-caption td {
+    border-bottom: 2px solid #c9c8c8;
+    border-top: 2px solid #c9c8c8;
+}
+
+.sub-caption .lil-nr {
+    border: none;
+}
+
+.sub-caption td:nth-child(2) {
+    font-size: 17px;
+}
+
+.sub-caption td:nth-child(+n + 5) {
+    font-size: 18px;
 }
